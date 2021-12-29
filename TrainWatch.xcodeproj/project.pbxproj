@@ -1,0 +1,831 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		64038520277CC39300179ADD /* TrainWatch WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 6403851F277CC39300179ADD /* TrainWatch WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		64038525277CC39400179ADD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64038524277CC39400179ADD /* Assets.xcassets */; };
+		6403852B277CC39400179ADD /* TrainWatch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6403852A277CC39400179ADD /* TrainWatch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		64038530277CC39400179ADD /* TrainWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6403852F277CC39400179ADD /* TrainWatchApp.swift */; };
+		64038532277CC39400179ADD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64038531277CC39400179ADD /* ContentView.swift */; };
+		64038534277CC39400179ADD /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64038533277CC39400179ADD /* NotificationController.swift */; };
+		64038536277CC39400179ADD /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64038535277CC39400179ADD /* NotificationView.swift */; };
+		64038538277CC39400179ADD /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64038537277CC39400179ADD /* ComplicationController.swift */; };
+		6403853A277CC39500179ADD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64038539277CC39500179ADD /* Assets.xcassets */; };
+		6403853D277CC39500179ADD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6403853C277CC39500179ADD /* Preview Assets.xcassets */; };
+		64038549277CC39500179ADD /* TrainWatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64038548277CC39500179ADD /* TrainWatchTests.swift */; };
+		64038553277CC39500179ADD /* TrainWatchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64038552277CC39500179ADD /* TrainWatchUITests.swift */; };
+		64038555277CC39500179ADD /* TrainWatchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64038554277CC39500179ADD /* TrainWatchUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		64038521277CC39300179ADD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 64038515277CC39300179ADD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6403851E277CC39300179ADD;
+			remoteInfo = "TrainWatch WatchKit App";
+		};
+		6403852C277CC39400179ADD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 64038515277CC39300179ADD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 64038529277CC39400179ADD;
+			remoteInfo = "TrainWatch WatchKit Extension";
+		};
+		64038545277CC39500179ADD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 64038515277CC39300179ADD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 64038529277CC39400179ADD;
+			remoteInfo = "TrainWatch WatchKit Extension";
+		};
+		6403854F277CC39500179ADD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 64038515277CC39300179ADD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6403851E277CC39300179ADD;
+			remoteInfo = "TrainWatch WatchKit App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6403855B277CC39500179ADD /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				6403852B277CC39400179ADD /* TrainWatch WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6403855F277CC39500179ADD /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				64038520277CC39300179ADD /* TrainWatch WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6403851B277CC39300179ADD /* TrainWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrainWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6403851F277CC39300179ADD /* TrainWatch WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TrainWatch WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		64038524277CC39400179ADD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6403852A277CC39400179ADD /* TrainWatch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "TrainWatch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6403852F277CC39400179ADD /* TrainWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainWatchApp.swift; sourceTree = "<group>"; };
+		64038531277CC39400179ADD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		64038533277CC39400179ADD /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		64038535277CC39400179ADD /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		64038537277CC39400179ADD /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		64038539277CC39500179ADD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6403853C277CC39500179ADD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6403853E277CC39500179ADD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6403853F277CC39500179ADD /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		64038544277CC39500179ADD /* TrainWatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrainWatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		64038548277CC39500179ADD /* TrainWatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainWatchTests.swift; sourceTree = "<group>"; };
+		6403854E277CC39500179ADD /* TrainWatchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrainWatchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		64038552277CC39500179ADD /* TrainWatchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainWatchUITests.swift; sourceTree = "<group>"; };
+		64038554277CC39500179ADD /* TrainWatchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainWatchUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		64038527277CC39400179ADD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64038541277CC39500179ADD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6403854B277CC39500179ADD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		64038514277CC39300179ADD = {
+			isa = PBXGroup;
+			children = (
+				64038523277CC39300179ADD /* TrainWatch WatchKit App */,
+				6403852E277CC39400179ADD /* TrainWatch WatchKit Extension */,
+				64038547277CC39500179ADD /* TrainWatchTests */,
+				64038551277CC39500179ADD /* TrainWatchUITests */,
+				6403851C277CC39300179ADD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6403851C277CC39300179ADD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6403851B277CC39300179ADD /* TrainWatch.app */,
+				6403851F277CC39300179ADD /* TrainWatch WatchKit App.app */,
+				6403852A277CC39400179ADD /* TrainWatch WatchKit Extension.appex */,
+				64038544277CC39500179ADD /* TrainWatchTests.xctest */,
+				6403854E277CC39500179ADD /* TrainWatchUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		64038523277CC39300179ADD /* TrainWatch WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				64038524277CC39400179ADD /* Assets.xcassets */,
+			);
+			path = "TrainWatch WatchKit App";
+			sourceTree = "<group>";
+		};
+		6403852E277CC39400179ADD /* TrainWatch WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				6403852F277CC39400179ADD /* TrainWatchApp.swift */,
+				64038531277CC39400179ADD /* ContentView.swift */,
+				64038533277CC39400179ADD /* NotificationController.swift */,
+				64038535277CC39400179ADD /* NotificationView.swift */,
+				64038537277CC39400179ADD /* ComplicationController.swift */,
+				64038539277CC39500179ADD /* Assets.xcassets */,
+				6403853E277CC39500179ADD /* Info.plist */,
+				6403853F277CC39500179ADD /* PushNotificationPayload.apns */,
+				6403853B277CC39500179ADD /* Preview Content */,
+			);
+			path = "TrainWatch WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		6403853B277CC39500179ADD /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				6403853C277CC39500179ADD /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		64038547277CC39500179ADD /* TrainWatchTests */ = {
+			isa = PBXGroup;
+			children = (
+				64038548277CC39500179ADD /* TrainWatchTests.swift */,
+			);
+			path = TrainWatchTests;
+			sourceTree = "<group>";
+		};
+		64038551277CC39500179ADD /* TrainWatchUITests */ = {
+			isa = PBXGroup;
+			children = (
+				64038552277CC39500179ADD /* TrainWatchUITests.swift */,
+				64038554277CC39500179ADD /* TrainWatchUITestsLaunchTests.swift */,
+			);
+			path = TrainWatchUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6403851A277CC39300179ADD /* TrainWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 64038560277CC39500179ADD /* Build configuration list for PBXNativeTarget "TrainWatch" */;
+			buildPhases = (
+				64038519277CC39300179ADD /* Resources */,
+				6403855F277CC39500179ADD /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				64038522277CC39300179ADD /* PBXTargetDependency */,
+			);
+			name = TrainWatch;
+			productName = TrainWatch;
+			productReference = 6403851B277CC39300179ADD /* TrainWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		6403851E277CC39300179ADD /* TrainWatch WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6403855C277CC39500179ADD /* Build configuration list for PBXNativeTarget "TrainWatch WatchKit App" */;
+			buildPhases = (
+				6403851D277CC39300179ADD /* Resources */,
+				6403855B277CC39500179ADD /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6403852D277CC39400179ADD /* PBXTargetDependency */,
+			);
+			name = "TrainWatch WatchKit App";
+			productName = "TrainWatch WatchKit App";
+			productReference = 6403851F277CC39300179ADD /* TrainWatch WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		64038529277CC39400179ADD /* TrainWatch WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 64038558277CC39500179ADD /* Build configuration list for PBXNativeTarget "TrainWatch WatchKit Extension" */;
+			buildPhases = (
+				64038526277CC39400179ADD /* Sources */,
+				64038527277CC39400179ADD /* Frameworks */,
+				64038528277CC39400179ADD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TrainWatch WatchKit Extension";
+			productName = "TrainWatch WatchKit Extension";
+			productReference = 6403852A277CC39400179ADD /* TrainWatch WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+		64038543277CC39500179ADD /* TrainWatchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 64038563277CC39500179ADD /* Build configuration list for PBXNativeTarget "TrainWatchTests" */;
+			buildPhases = (
+				64038540277CC39500179ADD /* Sources */,
+				64038541277CC39500179ADD /* Frameworks */,
+				64038542277CC39500179ADD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				64038546277CC39500179ADD /* PBXTargetDependency */,
+			);
+			name = TrainWatchTests;
+			productName = TrainWatchTests;
+			productReference = 64038544277CC39500179ADD /* TrainWatchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6403854D277CC39500179ADD /* TrainWatchUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 64038566277CC39500179ADD /* Build configuration list for PBXNativeTarget "TrainWatchUITests" */;
+			buildPhases = (
+				6403854A277CC39500179ADD /* Sources */,
+				6403854B277CC39500179ADD /* Frameworks */,
+				6403854C277CC39500179ADD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				64038550277CC39500179ADD /* PBXTargetDependency */,
+			);
+			name = TrainWatchUITests;
+			productName = TrainWatchUITests;
+			productReference = 6403854E277CC39500179ADD /* TrainWatchUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		64038515277CC39300179ADD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					6403851A277CC39300179ADD = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					6403851E277CC39300179ADD = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					64038529277CC39400179ADD = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					64038543277CC39500179ADD = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 64038529277CC39400179ADD;
+					};
+					6403854D277CC39500179ADD = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 6403851E277CC39300179ADD;
+					};
+				};
+			};
+			buildConfigurationList = 64038518277CC39300179ADD /* Build configuration list for PBXProject "TrainWatch" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 64038514277CC39300179ADD;
+			productRefGroup = 6403851C277CC39300179ADD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6403851A277CC39300179ADD /* TrainWatch */,
+				6403851E277CC39300179ADD /* TrainWatch WatchKit App */,
+				64038529277CC39400179ADD /* TrainWatch WatchKit Extension */,
+				64038543277CC39500179ADD /* TrainWatchTests */,
+				6403854D277CC39500179ADD /* TrainWatchUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		64038519277CC39300179ADD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6403851D277CC39300179ADD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64038525277CC39400179ADD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64038528277CC39400179ADD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6403853D277CC39500179ADD /* Preview Assets.xcassets in Resources */,
+				6403853A277CC39500179ADD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64038542277CC39500179ADD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6403854C277CC39500179ADD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		64038526277CC39400179ADD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64038534277CC39400179ADD /* NotificationController.swift in Sources */,
+				64038532277CC39400179ADD /* ContentView.swift in Sources */,
+				64038538277CC39400179ADD /* ComplicationController.swift in Sources */,
+				64038530277CC39400179ADD /* TrainWatchApp.swift in Sources */,
+				64038536277CC39400179ADD /* NotificationView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64038540277CC39500179ADD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64038549277CC39500179ADD /* TrainWatchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6403854A277CC39500179ADD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64038553277CC39500179ADD /* TrainWatchUITests.swift in Sources */,
+				64038555277CC39500179ADD /* TrainWatchUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		64038522277CC39300179ADD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6403851E277CC39300179ADD /* TrainWatch WatchKit App */;
+			targetProxy = 64038521277CC39300179ADD /* PBXContainerItemProxy */;
+		};
+		6403852D277CC39400179ADD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 64038529277CC39400179ADD /* TrainWatch WatchKit Extension */;
+			targetProxy = 6403852C277CC39400179ADD /* PBXContainerItemProxy */;
+		};
+		64038546277CC39500179ADD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 64038529277CC39400179ADD /* TrainWatch WatchKit Extension */;
+			targetProxy = 64038545277CC39500179ADD /* PBXContainerItemProxy */;
+		};
+		64038550277CC39500179ADD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6403851E277CC39300179ADD /* TrainWatch WatchKit App */;
+			targetProxy = 6403854F277CC39500179ADD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		64038556277CC39500179ADD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		64038557277CC39500179ADD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		64038559277CC39500179ADD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TrainWatch WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 26QXTV3GK8;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "TrainWatch WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "TrainWatch WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.manuelschuler.TrainWatch.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Debug;
+		};
+		6403855A277CC39500179ADD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TrainWatch WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 26QXTV3GK8;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "TrainWatch WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "TrainWatch WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.manuelschuler.TrainWatch.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Release;
+		};
+		6403855D277CC39500179ADD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 26QXTV3GK8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = TrainWatch_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = "TrainWatch WatchKit App";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.manuelschuler.TrainWatch.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Debug;
+		};
+		6403855E277CC39500179ADD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 26QXTV3GK8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = TrainWatch_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = "TrainWatch WatchKit App";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.manuelschuler.TrainWatch.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Release;
+		};
+		64038561277CC39500179ADD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 26QXTV3GK8;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.manuelschuler.TrainWatch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		64038562277CC39500179ADD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 26QXTV3GK8;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.manuelschuler.TrainWatch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		64038564277CC39500179ADD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 26QXTV3GK8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.manuelschuler.TrainWatchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrainWatch WatchKit Extension.appex/TrainWatch WatchKit Extension";
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Debug;
+		};
+		64038565277CC39500179ADD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 26QXTV3GK8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.manuelschuler.TrainWatchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrainWatch WatchKit Extension.appex/TrainWatch WatchKit Extension";
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Release;
+		};
+		64038567277CC39500179ADD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 26QXTV3GK8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.manuelschuler.TrainWatchUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "TrainWatch WatchKit App";
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Debug;
+		};
+		64038568277CC39500179ADD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 26QXTV3GK8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.manuelschuler.TrainWatchUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "TrainWatch WatchKit App";
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		64038518277CC39300179ADD /* Build configuration list for PBXProject "TrainWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64038556277CC39500179ADD /* Debug */,
+				64038557277CC39500179ADD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		64038558277CC39500179ADD /* Build configuration list for PBXNativeTarget "TrainWatch WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64038559277CC39500179ADD /* Debug */,
+				6403855A277CC39500179ADD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6403855C277CC39500179ADD /* Build configuration list for PBXNativeTarget "TrainWatch WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6403855D277CC39500179ADD /* Debug */,
+				6403855E277CC39500179ADD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		64038560277CC39500179ADD /* Build configuration list for PBXNativeTarget "TrainWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64038561277CC39500179ADD /* Debug */,
+				64038562277CC39500179ADD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		64038563277CC39500179ADD /* Build configuration list for PBXNativeTarget "TrainWatchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64038564277CC39500179ADD /* Debug */,
+				64038565277CC39500179ADD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		64038566277CC39500179ADD /* Build configuration list for PBXNativeTarget "TrainWatchUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64038567277CC39500179ADD /* Debug */,
+				64038568277CC39500179ADD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 64038515277CC39300179ADD /* Project object */;
+}
