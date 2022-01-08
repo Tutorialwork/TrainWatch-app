@@ -1,0 +1,30 @@
+/* 
+  Localizable.strings
+  TrainWatch
+
+  Created by Manuel on 07.01.22.
+  
+*/
+
+"Add train" = "Zug hinzufügen";
+"%@ to %@" = "%@ nach %@";
+"Start station" = "Startbahnhof";
+"Select station" = "Bahnhof auswählen";
+"Hour of depature" = "Abfahrt";
+"Search" = "Suche";
+"Recently used" = "Kürzlich verwendet";
+"Station" = "Bahnhof";
+"Sorry, no train has been found." = "Es wurden leider keine Züge gefunden.";
+"This train is already on your list." = "Dieser Zug ist bereits auf deiner Liste";
+"Depature" = "Abfahrt";
+"Platform" = "Gleis";
+"Destination" = "Ziel";
+"Messages" = "Nachrichten";
+"Add first train" = "Ersten Zug hinzufügen";
+"Hello 👋 \nStart tracking your trains by adding your first to your watchlist." = "Hallo 👋 \nFüge gleich deinen ersten Zug hinzu, um auf dem Laufenden zu bleiben.";
+"Hour" = "Stunde";
+"Please type below your start station and select it." = "Suche nach deinem Startbahnhof und wähle ihn aus.";
+"On time" = "Pünktlich";
+"Journey has been canceled" = "Fahrt fällt aus";
+"Canceled" = "Abgesagt";
+"Only long-distance traffic" = "Nur Fernverkehr";
