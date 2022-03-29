@@ -12,7 +12,7 @@ struct ContentView: View {
     
     let timer = Timer.publish(every: 60, on: .main, in: .common).autoconnect()
 
-    @State var trains: [Train] = []
+    @State var trains: [Train] = TrainStorageManager.loadTrainCache()
     @State var pushed: Bool = false
     @State var downloadFailed: Bool = false
     @State var isRetrying: Bool = false
@@ -91,6 +91,7 @@ struct ContentView: View {
                 downloadFailed = false
                 self.trains = trainList
                 self.trains = self.trains.sorted { $0.departure < $1.departure }
+                TrainStorageManager.saveTrainCache(toCache: self.trains)
             } else {
                 downloadFailed = true
                 isRetrying = false

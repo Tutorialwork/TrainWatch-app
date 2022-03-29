@@ -58,6 +58,35 @@ class TrainStorageManager {
         }
     }
     
+    static func loadTrainCache() -> [Train] {
+        let json = UserDefaults.standard.data(forKey: "trainCache")
+        let decoder = JSONDecoder()
+        
+        if let data = json {
+            do {
+                let trains: [Train] = try decoder.decode([Train].self, from: data)
+                                
+                return trains
+            } catch {
+                print("Error while loading train cache")
+            }
+        }
+        
+        return []
+    }
+    
+    static func saveTrainCache(toCache: [Train]) -> Void {
+        let encoder = JSONEncoder()
+        
+        do {
+            let data = try encoder.encode(toCache)
+            
+            UserDefaults.standard.set(data, forKey: "trainCache")
+        } catch {
+            print("Error while save train cache")
+        }
+    }
+    
     static func formatTrainNumber(train: Train) -> String {
         return train.trainType + (train.trainLine ?? train.trainNumber)
     }
