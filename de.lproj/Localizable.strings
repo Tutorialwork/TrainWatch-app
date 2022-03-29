@@ -28,3 +28,6 @@
 "Journey has been canceled" = "Fahrt fällt aus";
 "Canceled" = "Abgesagt";
 "Only long-distance traffic" = "Nur Fernverkehr";
+"No connection" = "Keine Verbindung";
+"No or bad internet connection. Please make sure you are connected to a network." = "Keine oder schlechte Internetverbindung. Bitte überprüfe deine Netzwerkeinstellungen.";
+"Retry" = "Erneut versuchen";

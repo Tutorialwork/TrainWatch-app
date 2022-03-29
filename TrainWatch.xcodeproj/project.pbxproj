@@ -32,6 +32,7 @@
 		64DC23472783342A00EE3EDF /* SearchTrainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DC23462783342A00EE3EDF /* SearchTrainPage.swift */; };
 		64DC234927835AA100EE3EDF /* SelectTrainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DC234827835AA100EE3EDF /* SelectTrainPage.swift */; };
 		64E1ED7C2782460F00BA842A /* TrainData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E1ED7B2782460F00BA842A /* TrainData.swift */; };
+		64F6B3D227F340FB00BC8796 /* OfflinePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F6B3D127F340FB00BC8796 /* OfflinePage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +124,7 @@
 		64DC23462783342A00EE3EDF /* SearchTrainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTrainPage.swift; sourceTree = "<group>"; };
 		64DC234827835AA100EE3EDF /* SelectTrainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTrainPage.swift; sourceTree = "<group>"; };
 		64E1ED7B2782460F00BA842A /* TrainData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainData.swift; sourceTree = "<group>"; };
+		64F6B3D127F340FB00BC8796 /* OfflinePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflinePage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,6 +237,7 @@
 				64DC23462783342A00EE3EDF /* SearchTrainPage.swift */,
 				64DC234827835AA100EE3EDF /* SelectTrainPage.swift */,
 				649EC1602784974C0091762A /* TrainDetailPage.swift */,
+				64F6B3D127F340FB00BC8796 /* OfflinePage.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -469,6 +472,7 @@
 				64DC23452783333A00EE3EDF /* Train.swift in Sources */,
 				649EC1612784974C0091762A /* TrainDetailPage.swift in Sources */,
 				649EC15F278466210091762A /* DateManager.swift in Sources */,
+				64F6B3D227F340FB00BC8796 /* OfflinePage.swift in Sources */,
 				64A4548F2788551A00C5E912 /* Message.swift in Sources */,
 				6403856E277CF60F00179ADD /* Station.swift in Sources */,
 				64DC234927835AA100EE3EDF /* SelectTrainPage.swift in Sources */,

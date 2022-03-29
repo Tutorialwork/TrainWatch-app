@@ -62,7 +62,7 @@ class TrainStorageManager {
         return train.trainType + (train.trainLine ?? train.trainNumber)
     }
     
-    static func loadCurrentTrainData(toRequestTrains: [TrainData], onFinish: @escaping ((_ trainList: [Train]) -> Void)) -> Void {
+    static func loadCurrentTrainData(toRequestTrains: [TrainData], onFinish: @escaping ((_ trainList: [Train]?) -> Void)) -> Void {
         guard let url = URL(string: "https://api-trainwatch.manuelschuler.dev/trains") else { return }
         
         var request = URLRequest(url: url)
@@ -81,7 +81,13 @@ class TrainStorageManager {
         request.httpBody = data
         
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
-            let trains = try! JSONDecoder().decode([Train].self, from: data!)
+            var trains: [Train]? = []
+            
+            if let responseData = data {
+                trains = try! JSONDecoder().decode([Train].self, from: responseData)
+            } else {
+                trains = nil
+            }
             
             onFinish(trains)
         }

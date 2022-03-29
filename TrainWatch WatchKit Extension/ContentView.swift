@@ -11,11 +11,18 @@ import UserNotifications
 struct ContentView: View {
     
     let timer = Timer.publish(every: 60, on: .main, in: .common).autoconnect()
-    
-    @State var pushed: Bool = false
-    @State var trains: [Train] = []
 
+    @State var trains: [Train] = []
+    @State var pushed: Bool = false
+    @State var downloadFailed: Bool = false
+    @State var isRetrying: Bool = false
+    
     var body: some View {
+        if (downloadFailed) {
+            OfflinePage(isRetrying: $isRetrying) {
+                fetchData()
+            }
+        }
         VStack {
             if trains.count != 0 {
                 List {
@@ -79,10 +86,15 @@ struct ContentView: View {
     }
     
     func fetchData() -> Void {
-        print("Fetching data")
         TrainStorageManager.loadCurrentTrainData(toRequestTrains: TrainStorageManager.loadTrains()) { trainList in
-            self.trains = trainList
-            self.trains = self.trains.sorted { $0.departure < $1.departure }
+            if let trainList = trainList {
+                downloadFailed = false
+                self.trains = trainList
+                self.trains = self.trains.sorted { $0.departure < $1.departure }
+            } else {
+                downloadFailed = true
+                isRetrying = false
+            }
         }
     }
     
