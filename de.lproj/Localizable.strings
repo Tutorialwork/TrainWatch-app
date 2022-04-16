@@ -31,3 +31,5 @@
 "No connection" = "Keine Verbindung";
 "No or bad internet connection. Please make sure you are connected to a network." = "Keine oder schlechte Internetverbindung. Bitte überprüfe deine Netzwerkeinstellungen.";
 "Retry" = "Erneut versuchen";
+"Today not scheduled" = "Heute nicht geplant";
+"This train is today not scheduled. If this occurs longer the timetable may has been changed." = "Dieser Zug fährt heute nicht. Passiert das öfters könnte der Fahrplan geändert worden sein.";

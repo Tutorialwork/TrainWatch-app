@@ -22,12 +22,14 @@ struct TrainDetailPage: View {
                     HStack {
                         Text(DateManager.formatDate(isoString: train.departure))
                         Spacer()
-                        if getDelayString(train: train) != "On time" {
-                            Text(getDelayString(train: train))
-                                .bold()
-                        } else {
-                            Text("On time")
-                                .bold()
+                        if train.tripStatus == TripStatus.PLANNED {
+                            if getDelayString(train: train) != "On time" {
+                                Text(getDelayString(train: train))
+                                    .bold()
+                            } else {
+                                Text("On time")
+                                    .bold()
+                            }
                         }
                     }
                 } else {
@@ -38,47 +40,56 @@ struct TrainDetailPage: View {
                 }
             }
             .frame(maxWidth: .infinity, alignment: .leading)
-            VStack {
-                Text("Platform")
-                    .font(.subheadline)
-                    .foregroundColor(.gray)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                if train.changedPlatform != nil {
-                    HStack {
-                        Text(train.platform)
-                            .strikethrough()
-                        Text(train.changedPlatform ?? "?")
-                            .foregroundColor(.red)
-                    }
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                } else {
-                    Text(train.platform)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                }
-            }
-            .frame(maxWidth: .infinity, alignment: .leading)
-            VStack {
-                Text("Destination")
-                    .font(.subheadline)
-                    .foregroundColor(.gray)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                Text("\(TrainStorageManager.formatTrainNumber(train: train)) to \(train.stations.last ?? "End")")
-                    .frame(maxWidth: .infinity, alignment: .leading)
-            }
-            .frame(maxWidth: .infinity, alignment: .leading)
-            if let messages = train.messages {
+            if train.tripStatus == TripStatus.PLANNED {
                 VStack {
-                    Text("Messages")
+                    Text("Platform")
                         .font(.subheadline)
                         .foregroundColor(.gray)
                         .frame(maxWidth: .infinity, alignment: .leading)
-                    ForEach(messages, id: \.self) { message in
-                        Text("• " + message.message)
-                            .fixedSize(horizontal: false, vertical: true)
+                    if train.changedPlatform != nil {
+                        HStack {
+                            Text(train.platform)
+                                .strikethrough()
+                            Text(train.changedPlatform ?? "?")
+                                .foregroundColor(.red)
+                        }
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    } else {
+                        Text(train.platform)
                             .frame(maxWidth: .infinity, alignment: .leading)
                     }
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
+                VStack {
+                    Text("Destination")
+                        .font(.subheadline)
+                        .foregroundColor(.gray)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    Text("\(TrainStorageManager.formatTrainNumber(train: train)) to \(train.stations.last ?? "End")")
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+                if let messages = train.messages {
+                    VStack {
+                        Text("Messages")
+                            .font(.subheadline)
+                            .foregroundColor(.gray)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                        ForEach(messages, id: \.self) { message in
+                            Text("• " + message.message)
+                                .fixedSize(horizontal: false, vertical: true)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                        }
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                }
+            } else {
+                Spacer()
+                Text("Information")
+                    .font(.subheadline)
+                    .foregroundColor(.gray)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                Text("This train is today not scheduled. If this occurs longer the timetable may has been changed.")
             }
         }
     }

@@ -34,23 +34,32 @@ struct ContentView: View {
                                 HStack {
                                     Text(DateManager.formatDate(isoString: train.departure))
                                     Spacer()
-                                    if !TrainStorageManager.checkIfTripIsCanceld(toCheck: train) {
-                                        if getDelayString(train: train) != "On time" {
-                                            Text(getDelayString(train: train))
-                                                .bold()
+                                    if train.tripStatus == TripStatus.PLANNED {
+                                        if !TrainStorageManager.checkIfTripIsCanceld(toCheck: train) {
+                                            if getDelayString(train: train) != "On time" {
+                                                Text(getDelayString(train: train))
+                                                    .bold()
+                                            } else {
+                                                Text("On time")
+                                                    .bold()
+                                            }
                                         } else {
-                                            Text("On time")
+                                            Text("Canceled")
+                                                .foregroundColor(.red)
                                                 .bold()
                                         }
-                                    } else {
-                                        Text("Canceled")
-                                            .foregroundColor(.red)
-                                            .bold()
                                     }
                                 }
-                                Text("\(TrainStorageManager.formatTrainNumber(train: train)) to \(train.stations.last ?? "End")")
-                                    .lineLimit(1)
-                                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+                                if train.tripStatus == TripStatus.PLANNED {
+                                    Text("\(TrainStorageManager.formatTrainNumber(train: train)) to \(train.stations.last ?? "End")")
+                                        .lineLimit(1)
+                                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+                                } else {
+                                    Text("Today not scheduled")
+                                        .bold()
+                                        .lineLimit(1)
+                                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+                                }
                             }
                         }
                     }
@@ -86,8 +95,23 @@ struct ContentView: View {
     }
     
     func fetchData() -> Void {
-        TrainStorageManager.loadCurrentTrainData(toRequestTrains: TrainStorageManager.loadTrains()) { trainList in
-            if let trainList = trainList {
+        let trainRequestData: [TrainData] = TrainStorageManager.loadTrains()
+        
+        TrainStorageManager.loadCurrentTrainData(toRequestTrains: trainRequestData) { trainList in
+            if var trainList = trainList {
+                trainRequestData.forEach { requestedTrain in
+                    let isTrainFound: Bool = trainList.contains { train in
+                        return train.trainNumber == requestedTrain.trainNumber
+                    }
+                    /** Add train listing with not scheduled status to inform the user that maybe the timetable has been changed. */
+                    if (!isTrainFound) {
+                        let departure: Date = DateManager.generateDateFromHourAndMinute(hour: requestedTrain.hour, minute: requestedTrain.minute) ?? Date()
+                        let isoDepartureString: String = DateManager.toIso8601DateString(date: departure)
+                        
+                        trainList.append(Train(trainId: "", trainType: "", trainNumber: requestedTrain.trainNumber, departure: isoDepartureString, platform: "", stations: [], tripStatus: TripStatus.NOT_SCHEDULED))
+                    }
+                }
+                                
                 downloadFailed = false
                 self.trains = trainList
                 self.trains = self.trains.sorted { $0.departure < $1.departure }

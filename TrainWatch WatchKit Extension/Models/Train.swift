@@ -23,7 +23,7 @@ struct Train: Codable {
     var stations: [String]
     var changedStations: [String]?
     var tripType: String? // because international trains like the ECE don't have this attribute
-    var tripStatus: String
+    var tripStatus: TripStatus
     var messages: [Message]?
     
 }

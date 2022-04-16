@@ -36,4 +36,36 @@ class DateManager {
         }
     }
     
+    static func toIso8601DateString(date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZZZZZ"
+        return dateFormatter.string(from: date)
+    }
+    
+    static func generateDateFromHourAndMinute(hour: Int, minute: Int) -> Date? {
+        let now = Date()
+        
+        let yearDateFormatter = DateFormatter()
+        yearDateFormatter.dateFormat = "yyyy"
+        let yearString = yearDateFormatter.string(from: now)
+        
+        let monthDateFormatter = DateFormatter()
+        monthDateFormatter.dateFormat = "M"
+        let monthString = monthDateFormatter.string(from: now)
+        
+        let dayDateFormatter = DateFormatter()
+        dayDateFormatter.dateFormat = "d"
+        let dayString = dayDateFormatter.string(from: now)
+        
+        var dateComponents = DateComponents()
+        dateComponents.year = Int(yearString)
+        dateComponents.month = Int(monthString)
+        dateComponents.day = Int(dayString)
+        dateComponents.hour = hour
+        dateComponents.minute = minute
+
+        let userCalendar = Calendar(identifier: .gregorian)
+        return userCalendar.date(from: dateComponents)
+    }
+    
 }
