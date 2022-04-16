@@ -101,7 +101,15 @@ struct ContentView: View {
     
     func deleteTrain(at offsets: IndexSet) {
         var trainDataList: [TrainData] = TrainStorageManager.loadTrains()
+                
+        var index: Int = 0
+        trainDataList.forEach { trainData in
+            trainDataList[index].secondsSinceMidnight = (trainData.hour * 3600) + (trainData.minute * 60)
+            index += 1
+        }
+        trainDataList = trainDataList.sorted(by: { $0.secondsSinceMidnight < $1.secondsSinceMidnight })
         trainDataList.remove(atOffsets: offsets)
+        
         TrainStorageManager.saveTrains(toSave: trainDataList)
         fetchData()
     }
