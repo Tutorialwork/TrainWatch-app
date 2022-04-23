@@ -108,7 +108,7 @@ struct ContentView: View {
                         let departure: Date = DateManager.generateDateFromHourAndMinute(hour: requestedTrain.hour, minute: requestedTrain.minute) ?? Date()
                         let isoDepartureString: String = DateManager.toIso8601DateString(date: departure)
                         
-                        trainList.append(Train(trainId: "", trainType: "", trainNumber: requestedTrain.trainNumber, departure: isoDepartureString, platform: "", stations: [], tripStatus: TripStatus.NOT_SCHEDULED))
+                        trainList.append(Train(trainId: UUID().uuidString, trainType: "", trainNumber: requestedTrain.trainNumber, departure: isoDepartureString, platform: "", stations: [], tripStatus: TripStatus.NOT_SCHEDULED))
                     }
                 }
                                 
