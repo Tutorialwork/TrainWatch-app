@@ -11,5 +11,6 @@ struct Message: Codable, Hashable {
     
     var code: Int
     var message: String
+    var createdAt: String
     
 }

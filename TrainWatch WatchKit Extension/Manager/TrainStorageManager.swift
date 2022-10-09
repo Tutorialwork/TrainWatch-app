@@ -88,7 +88,7 @@ class TrainStorageManager {
     }
     
     static func formatTrainNumber(train: Train) -> String {
-        return train.trainType + (train.trainLine ?? train.trainNumber)
+        return train.trainType + (train.trainLine ?? String(train.trainNumber))
     }
     
     static func loadCurrentTrainData(toRequestTrains: [TrainData], onFinish: @escaping ((_ trainList: [Train]?) -> Void)) -> Void {
@@ -122,20 +122,4 @@ class TrainStorageManager {
         }
         task.resume()
     }
-    
-    /**
-     When a train is canceld the changed station parameter is set with the following content: [""]
-     */
-    static func checkIfTripIsCanceld(toCheck: Train) -> Bool {
-        if let newStations = toCheck.changedStations {
-            if newStations.count == 1 && newStations[0].count == 0 {
-                return true
-            } else {
-                return false
-            }
-        } else {
-            return false
-        }
-    }
-    
 }

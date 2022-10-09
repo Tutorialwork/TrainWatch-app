@@ -7,5 +7,6 @@
 
 enum TripStatus: String, Codable {
     case PLANNED = "PLANNED"
+    case CANCELED = "CANCELED"
     case NOT_SCHEDULED = "NOT_SCHEDULED"
 }

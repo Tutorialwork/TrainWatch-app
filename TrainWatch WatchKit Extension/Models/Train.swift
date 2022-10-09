@@ -14,7 +14,7 @@ struct Train: Codable {
     
     var trainId: String
     var trainType: String
-    var trainNumber: String
+    var trainNumber: Int
     var trainLine: String?
     var departure: String
     var changedDeparture: String?

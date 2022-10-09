@@ -18,7 +18,7 @@ struct TrainDetailPage: View {
                     .font(.subheadline)
                     .foregroundColor(.gray)
                     .frame(maxWidth: .infinity, alignment: .leading)
-                if !TrainStorageManager.checkIfTripIsCanceld(toCheck: train) {
+                if train.tripStatus != TripStatus.CANCELED {
                     HStack {
                         Text(DateManager.formatDate(isoString: train.departure))
                         Spacer()
@@ -40,7 +40,7 @@ struct TrainDetailPage: View {
                 }
             }
             .frame(maxWidth: .infinity, alignment: .leading)
-            if train.tripStatus == TripStatus.PLANNED {
+            if train.tripStatus != TripStatus.NOT_SCHEDULED {
                 VStack {
                     Text("Platform")
                         .font(.subheadline)
@@ -70,18 +70,20 @@ struct TrainDetailPage: View {
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 if let messages = train.messages {
-                    VStack {
-                        Text("Messages")
-                            .font(.subheadline)
-                            .foregroundColor(.gray)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                        ForEach(messages, id: \.self) { message in
-                            Text("• " + message.message)
-                                .fixedSize(horizontal: false, vertical: true)
+                    if messages.count > 0 {
+                        VStack {
+                            Text("Messages")
+                                .font(.subheadline)
+                                .foregroundColor(.gray)
                                 .frame(maxWidth: .infinity, alignment: .leading)
+                            ForEach(messages, id: \.self) { message in
+                                Text("• " + message.message)
+                                    .fixedSize(horizontal: false, vertical: true)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                            }
                         }
+                        .frame(maxWidth: .infinity, alignment: .leading)
                     }
-                    .frame(maxWidth: .infinity, alignment: .leading)
                 }
             } else {
                 Spacer()

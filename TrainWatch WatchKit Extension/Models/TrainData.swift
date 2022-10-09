@@ -15,7 +15,7 @@ struct TrainData: Codable {
     var stationId: Int
     var hour: Int
     var minute: Int
-    var trainNumber: String
+    var trainNumber: Int
     var secondsSinceMidnight: Int = 0
     
 }

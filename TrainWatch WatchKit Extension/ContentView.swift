@@ -35,22 +35,20 @@ struct ContentView: View {
                                     Text(DateManager.formatDate(isoString: train.departure))
                                     Spacer()
                                     if train.tripStatus == TripStatus.PLANNED {
-                                        if !TrainStorageManager.checkIfTripIsCanceld(toCheck: train) {
-                                            if getDelayString(train: train) != "On time" {
-                                                Text(getDelayString(train: train))
-                                                    .bold()
-                                            } else {
-                                                Text("On time")
-                                                    .bold()
-                                            }
+                                        if getDelayString(train: train) != "On time" {
+                                            Text(getDelayString(train: train))
+                                                .bold()
                                         } else {
-                                            Text("Canceled")
-                                                .foregroundColor(.red)
+                                            Text("On time")
                                                 .bold()
                                         }
+                                    } else if train.tripStatus == TripStatus.CANCELED {
+                                        Text("Canceled")
+                                            .foregroundColor(.red)
+                                            .bold()
                                     }
                                 }
-                                if train.tripStatus == TripStatus.PLANNED {
+                                if train.tripStatus != TripStatus.NOT_SCHEDULED {
                                     Text("\(TrainStorageManager.formatTrainNumber(train: train)) to \(train.stations.last ?? "End")")
                                         .lineLimit(1)
                                         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
